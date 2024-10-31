@@ -1,0 +1,139 @@
+OPG 6.4
+
+void setup() {
+  String str = "Hej med dig!";
+
+  // While-løkke til at udskrive de første 5 bogstaver exluderet space bar
+  int bogstaver = 0;
+  while (bogstaver < 6) {
+    print(str.charAt(bogstaver));
+    bogstaver++;
+  }
+  println(); // Linjeskift efter while-løkken tingen 
+}
+
+
+void setup() {
+  String str = "Hej med dig!";
+  
+  // For-løkke til at udskrive de første 5 bogstaver
+  for (int bogstaver = 0; bogstaver < 6; bogstaver++) {
+    print(str.charAt(bogstaver));
+  }
+  println(); // Linjeskift efter for-løkken
+}
+
+
+Har fået hjælp  med GPT, dog har jeg rettet og ændret den, så den passer bedre til min måde
+opg 6.5
+void setup() {
+  String sætning = "Dette er en sætning, som indeholder mange e’er. Men hvor mange er der?";
+  int count = 0;
+  
+  for (int e = 0; e < sætning.length(); e++) {
+    if (sætning.charAt(e) == 'e') {
+      print("e ");
+      count++;
+    }
+  }
+  
+  println("\nAntal e'er fundet: " + count);
+  println("Længden af sætningen: " + sætning.length());
+}
+
+void setup() {
+  String sætning = "Dette er en sætning, som indeholder mange e’er. Men hvor mange er der?";
+  int antalE = 0;
+  int e = 0;
+  
+  while (e < sætning.length()) {
+    if (sætning.charAt(e) == 'e') {
+      print("e ");
+      antalE++;
+    }
+    e++;
+  }
+  
+  println("\nAntal e'er fundet: " + antalE);
+  println("Længden af sætningen: " + sætning.length());
+}
+
+OPG 6.6
+void setup() {
+  String sætning = "I Afrika lever der mange dyr på savannen, et af dem er zebraen. Zebraen er en flok dyr.";
+  sætning = sætning.toLowerCase(); // Konverter hele strengen til små bogstaver for nem søgning
+  int index = 0;
+  boolean fundet = false;
+  
+  while (index < sætning.length() && !fundet) {
+    if (sætning.charAt(index) == 'z') {
+      println("Fundet 'Z' ved index: " + index);
+      fundet = true; // Stop løkken
+    }
+    index++;
+  }
+  
+  if (!fundet) {
+    println("'Z' blev ikke fundet i sætningen.");
+  }
+}
+
+OPG 6.7
+void setup() {
+  String sætning = "I Afrika lever der mange dyr på savannen, et af dem er zebraen. Zebraen er et flokdyr.";
+  int antalZ = 0;
+  
+  for (int e = 0; e < sætning.length(); e++) {
+    char bogstav = Character.toLowerCase(sætning.charAt(e));
+    if (bogstav == 'z') {
+      antalZ++;
+    }
+  }
+  
+  println("Antal z’er: " + antalZ);
+}
+
+OPG 6.8
+void setup() {
+  String sætning = "I Afrika lever der mange dyr på savannen, et af dem er zebraen. Zebraen er en flok dyr.";
+  boolean fundet = false;
+
+  // Konverter hele strengen til små bogstaver for at søge efter 'z'
+  String lavSætning = sætning.toLowerCase();
+
+  for (int e = 0; e < lavSætning.length() && !fundet; e++) {
+    if (lavSætning.charAt(e) == 'z') {
+      println("Fundet 'z' på index: " + e);
+      fundet = true;
+    }
+  }
+}
+
+Alle opgaver i 6'erne brugte jeg ChatGPT til at hjælpe med starte fundamentet, og så har jeg selv ændret på koden her og der. 
+
+
+opg 7.1
+
+void setup() {
+  size(800, 800);
+  tegnRødCirkel();
+  tegnBlåFirkant();
+}
+
+// Forsøger at tegne en rød cirkel men virker fucking ikke
+void tegnRødCirkel() {
+  fill(255, 0, 0); // Rød farve
+  noStroke();
+  ellipse(width/2, height/2, 200, 200); // Cirkel med diameter 200
+}
+
+// Funktion til at tegne en blå firkant
+void tegnBlåFirkant() {
+  fill(0, 0, 255); // Blå farve
+  noStroke();
+  rectMode(CENTER);
+  rect(width/2, height/2, 200, 200); // Firkant med sidelængde 200
+}
+
+Alle opgaver videre nået jeg ikke at udføre inden for tidsrammen, sorry :(
+
